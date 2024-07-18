@@ -1,0 +1,30 @@
+[
+	{
+		"id": "http://zotero.org/users/12709819/items/RESN7RSM",
+		"type": "book",
+		"call-number": "QA76.9.O35 F695 2004",
+		"edition": "3rd ed",
+		"event-place": "Boston",
+		"ISBN": "978-0-321-19368-1",
+		"note": "OCLC: ocm52631384",
+		"number-of-pages": "175",
+		"publisher": "Addison-Wesley",
+		"publisher-place": "Boston",
+		"source": "Library of Congress ISBN",
+		"title": "UML distilled: a brief guide to the standard object modeling language",
+		"title-short": "UML distilled",
+		"author": [
+			{
+				"family": "Fowler",
+				"given": "Martin"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2004"
+				]
+			]
+		}
+	}
+]

@@ -1,14 +1,12 @@
 ---
 title: "Main page"
+link-citations: true
 ---
 
-[UML considerations](uml-considerations.html)
+- [UML considerations](uml-considerations.html)
+- Design patterns
+    - [Singleton](singleton.html)
+    - [Composite](composite.html)
+- [References](references.html)
 
-
-```python
-class A():
-    def __init__(self, a):
-        self.a = a
-    def do_something():
-        print(a)
-```
+[@http://zotero.org/users/12709819/items/RESN7RSM]
