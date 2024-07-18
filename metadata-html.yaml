@@ -1,0 +1,36 @@
+plantumlPath: C:\\Users\\Amine.Aboufirass\\desktop\\setups\\plantuml.jar
+fontsize: 12pt
+equationNumberTeX: \\tag
+eqnIndexTemplate: $$i$$
+maxwidth: 60em
+monobackgroundcolor: lightgrey
+header-includes: |
+  <style>
+  html {
+    background-color: #53464673;
+  }
+  body {
+    background-color: white;
+  }
+  figcaption {
+    text-align: center;
+  }
+  .listing > p {
+    text-align: center;
+  }
+  code:not(pre code) {
+    white-space: pre-wrap;
+    padding: 0;
+  }
+
+  td {
+    word-break: break-all;
+  }
+  figure
+  {
+    text-align: center;
+  }
+  p:has(img) {
+    text-align:center;
+  }
+  </style>
