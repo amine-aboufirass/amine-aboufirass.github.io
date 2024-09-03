@@ -7,11 +7,12 @@ foreach ($fileName in $markdownFiles)
         -o "$fileName.html" -L include-code-files.lua -F pandoc-crossref  `
         -L include-files.lua -L diagram-generator.lua  -F pantable `
         --mathjax --metadata-file metadata-html.yaml `
-        --extract-media ./svg "$fileName.md"
+        --extract-media ./svg "$fileName.md" --bibliography references.json --citeproc --csl ieee.csl
 }
 
 # Following command to generate a bibliography in main document
 # pandoc -s --citeproc --bibliography references.json -t html -o  index.html --csl .\ieee.csl index.md
 
 # Following command to generate a standalone bibliography
-pandoc .\references.json -s --metadata title:References --citeproc -o references.html --csl ieee.csl -f csljson -t html
+pandoc --template custom-html-template.html .\references.json --metadata title:References --citeproc `
+    -o references.html --csl ieee.csl -f csljson -t html --metadata-file metadata-html.yaml

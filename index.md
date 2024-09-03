@@ -1,6 +1,5 @@
 ---
 title: "Main page"
-link-citations: true
 ---
 
 - [UML considerations](uml-considerations.html)
