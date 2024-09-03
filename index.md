@@ -1,5 +1,6 @@
 ---
 title: "Main page"
+suppress-bibliography: true
 ---
 
 - [UML considerations](uml-considerations.html)

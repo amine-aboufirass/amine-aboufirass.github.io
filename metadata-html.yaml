@@ -4,6 +4,7 @@ equationNumberTeX: \\tag
 eqnIndexTemplate: $$i$$
 maxwidth: 60em
 monobackgroundcolor: lightgrey
+link-citations: true
 header-includes: |
   <style>
   html {
