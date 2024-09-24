@@ -1,6 +1,6 @@
 ---
 title: "Main page"
-suppress-bibliography: true
+link-citations: true
 ---
 
 - [UML considerations](uml-considerations.html)
@@ -9,4 +9,4 @@ suppress-bibliography: true
     - [Composite](composite.html)
 - [References](references.html)
 
-[@http://zotero.org/users/12709819/items/RESN7RSM]
+[@http://zotero.org/users/12709819/items/RESN7RSM; @http://zotero.org/users/12709819/items/RESN7RSM]
