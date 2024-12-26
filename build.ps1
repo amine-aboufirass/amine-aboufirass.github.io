@@ -1,18 +1,15 @@
-$markdownFiles = ls *.md | select -expandproperty basename
+param ($filename)
 
-foreach ($fileName in $markdownFiles)
-{
-    echo $fileName
-    pandoc --template custom-html-template.html --from markdown --to html `
-        -o "$fileName.html" -L include-code-files.lua -F pandoc-crossref  `
-        -L include-files.lua -L diagram-generator.lua  -F pantable `
-        --mathjax --metadata-file metadata-html.yaml `
-        --extract-media ./svg "$fileName.md" --bibliography references.json --citeproc --csl ieee.csl
-}
+papis export --all > library/references.bib
 
-# Following command to generate a bibliography in main document
-# pandoc -s --citeproc --bibliography references.json -t html -o  index.html --csl .\ieee.csl index.md
+# Convert bibliography to UTF-8
+Get-Content -Path "library/references.bib" | Set-Content -Path "references.bib" -Encoding UTF8
 
-# Following command to generate a standalone bibliography
-pandoc --template custom-html-template.html .\references.json --metadata title:References --citeproc `
-    -o references.html --csl ieee.csl -f csljson -t html --metadata-file metadata-html.yaml
+# build the main document(s), suppressing the bibliography but applying the filter
+pandoc -d defaults.yaml -o "$filename.html" "$filename.md"
+
+# build the bibliography, ensuring all entries are included regardless of whether 
+# they are cited or not
+pandoc -d defaults-bib.yaml -o references.html "blank.md"
+
+

@@ -1,0 +1,10 @@
+template: template.html
+from: markdown
+to: html
+csl: ieee.csl
+bibliography: "references.bib"
+metadata-files:
+  - metadata-bib.yaml
+filters:
+  - citeproc
+  - bib-filter-refs.lua

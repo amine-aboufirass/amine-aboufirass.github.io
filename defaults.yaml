@@ -1,0 +1,18 @@
+template: template.html
+from: markdown
+to: html
+filters:
+  - include-code-files.lua
+  - pandoc-crossref
+  - include-files.lua
+  - diagram-generator.lua
+  - pantable
+  - citeproc
+  - bib-filter-page.lua
+html-math-method:
+  method: mathjax
+csl: ieee.csl
+bibliography: "references.bib"
+extract-media: ./svg
+metadata-files:
+  - metadata.yaml
